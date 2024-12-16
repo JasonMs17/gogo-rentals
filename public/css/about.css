@@ -1,0 +1,148 @@
+.about {
+    font-family: 'circular-std';
+}
+
+.about-us {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    gap: 70px;
+}
+
+h2 {
+    font-size: 72px;
+    text-align: center;
+    margin: 100px 0 30px;
+    font-family: 'Jacques Francois Shadow';
+}
+
+.about-us .tulisan {
+    width: 55%;
+}
+
+.about-us .tulisan p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.about-us .gambar {
+    background-image: url("../img/gambar-about.jpg");
+    height: 600px;
+    width: 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 40px;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+
+.members .member-list {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.members .member-list .gambar-member {
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+#ichsan {
+    background-image: url("../img/ichsan.jpeg");
+}
+
+#vernan {
+    background-image: url("../img/vernan.jpeg");
+}
+
+#jason {
+    background-image: url("../img/jason.jpg");
+}
+
+.members .member-list .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.members .member-list .member p {
+    font-weight: 800;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 1024px) {
+    .about-us h2 {
+        margin: 20px 0 15px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .about-us {
+        flex-direction: column;
+        padding: 30px;
+        gap: 0;
+    }
+
+    .about-us .gambar {
+        width: 50%;
+        height: 400px;
+        margin-bottom: 30px;
+        order: 2;
+        align-self: center;
+    }
+
+    .about-us .tulisan {
+        width: 70%;
+        order: 1;
+        margin: 0 auto 30px;
+    }
+
+    .about-us h2 {
+        font-size: 45px;
+        margin: 30px 0 15px;
+    }
+
+    .about-us .tulisan p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .members h2 {
+        font-size: 45px;
+    }
+
+    .members .member-list {
+        flex-direction: column;
+    }
+
+    .members .member-list .gambar-member {
+        margin-bottom: 30px;
+        
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .about-us .tulisan {
+        width: 90%;
+    }
+
+    .about-us .gambar {
+        width: 90%;
+        height: 300px;
+    }
+}

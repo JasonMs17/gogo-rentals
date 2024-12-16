@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'circular-std';
+    src: url(../font/circular-std-book.otf) format('woff2');
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2C3444;
+}
+
+section {
+    width: 444px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+    margin-bottom: 80px;
+}
+
+section p {
+    text-align: left;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 67px;
+    background-color: #141B25;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+}
+
+.banner h1 {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.25);
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 80%;
+    margin-top: 100px;
+    font-family: 'circular-std';
+}
+
+.title p {
+    color: black;
+    margin-bottom: 32px;
+    font-family: 'circular-std';
+}
+
+section input {
+    width: 100%;
+    height: 43px;
+    border-radius: 28px;
+    border: 1px solid #000;
+    color: rgb(106, 105, 105);
+    font-size: 17px;
+    font-family: 'Inika';
+    font-weight: 500;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 14px;
+    font-family: inika;
+    margin-bottom: 10px;
+    color: #938F98;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section textarea {
+    font-family: 'Inika';
+    color: rgb(106, 105, 105);
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid;
+    font-size: 17px;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+section button {
+    width: 120px;
+    height: 43px;
+    background-color: #797676;
+    color: white;
+    border-radius: 35px;
+    border: none;
+    font-size: 17px;
+    font-family: Inter;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    transition: 0.3s ease;
+}
+
+section button:hover {
+    background-color: #5e5c5c;
+    cursor: pointer;
+}
+
+.validation-errors p {
+    padding-left: 15px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: rgb(222, 217, 217);
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.wrapper .read-only {
+    cursor: not-allowed;
+    background-color: #e2e2e2;
+    color: rgb(123, 123, 123);
+}

@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: url("../img/login_background.png"); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #2C3444;
+}
+
+section {
+    width: 65vw;
+    height: 500px;
+    display: flex;
+    border-radius: 10%;
+    box-shadow: 20px 20px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: calc(50% + 25px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gambar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141B25;
+    color: white;
+
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.gambar h1 {
+    color: white;
+    text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.25);
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.login {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-left: 5%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    height: 50px;
+    border-radius: 35px;
+    border: 1px solid #000;
+    color: #938F98;
+    font-size: 17px;
+    font-family: Inika;
+    font-weight: 500;
+    padding-left: 20px;
+    box-shadow: 0.5px 0.5px 1px 0.1px rgba(0, 0, 0, 0.5);
+}
+
+.login h1 {
+    color: #000100;
+    font-family: Century Gothic Std;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.login p {
+    font-size: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+}
+
+.login button {
+    width: 120px;
+    height: 50px;
+    background-color: #797676;
+    color: white;
+    border-radius: 35px;
+    border: none;
+    font-size: 17px;
+    font-family: Inter;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    align-self: flex-end;
+    transition: 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #5e5c5c;
+    cursor: pointer;
+}
+
+.user-icon {
+    margin-right: 10px;
+    transform: scale(0.8);
+}
+
+.password-icon {
+    margin-right: 10px;
+    transform: scale(0.7);
+}
+
+.validation-errors ul {
+    padding-left: 15px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: rgb(222, 217, 217);
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.remember {
+    margin-TOP: 5px;
+    margin-bottom: 30px;
+}
+
+.remember input[type="checkbox"] {
+    margin-right: 40px;
+}
+
+.remember label {
+    color: #6d6d6d;
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        height: 60vh;
+    }
+
+    .gambar {
+        display: none;
+    }
+
+    .login {
+        border-radius: 50px;
+        padding-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .login h1 {
+        margin-bottom: 10px;
+    }
+
+    .wrapper h1 {
+        font-size: 24px;
+    }
+
+    .user-icon {
+        margin-right: 10px;
+        transform: scale(0.6);
+    }
+
+    .password-icon {
+        margin-right: 10px;
+        transform: scale(0.5);
+    }
+
+    .login input {
+        height: 40px;
+    }
+
+    .login button {
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .login h1 {
+        margin-bottom: 10px;
+    }
+
+    section {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    .wrapper h1 {
+        font-size: 24px;
+    }
+
+    .user-icon {
+        margin-right: 10px;
+        transform: scale(0.6);
+    }
+
+    .password-icon {
+        margin-right: 10px;
+        transform: scale(0.5);
+    }
+
+    .login input {
+        height: 40px;
+    }
+
+    .login button {
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}

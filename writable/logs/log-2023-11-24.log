@@ -1,0 +1,1749 @@
+INFO - 2023-11-24 02:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-24 02:53:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyekGogoRenta...', 3306, '', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kategori.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Kendaraan.php(18): App\Models\Kategori->getKendaraanGroupByKategori()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kategori.php(34): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Kendaraan.php(18): App\Models\Kategori->getKendaraanGroupByKategori()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-24 02:53:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kategori`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Kategori.php(34): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Kendaraan.php(18): App\Models\Kategori->getKendaraanGroupByKategori()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+ERROR - 2023-11-24 02:53:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyekGogoRenta...', 3306, '', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(17): App\Models\Kendaraan->getKendaraan()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->index()
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(17): App\Models\Kendaraan->getKendaraan()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->index()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-24 02:53:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCAT(CONCAT(merk_kendaraan, " "), varian) as detail_kendaraan
+FROM `kendaraan`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin.php(17): App\Models\Kendaraan->getKendaraan()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 02:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 02:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 03:20:46 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 03:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 03:20:51 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:09 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:10 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:10 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:26 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:27 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:36 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:36 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:40 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:40 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:47 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:48 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:48 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:48 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:48 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:48 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:49 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:49 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:50 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:51 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:51 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:51 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:52 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:52 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:52 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:52 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:52 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:21:54 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:03 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:30 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:30 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:37 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:38 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:38 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:39 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:40 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:40 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:41 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:22:41 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 03:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 03:25:03 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:04 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:42 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:42 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:43 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:43 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:43 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:25:43 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:26:32 --> Undefined variable $kategoriName
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategoriName', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:26:32 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:26:33 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:26:33 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:26:34 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:28:29 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:28:29 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:28:29 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:28:29 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:28:30 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:28:30 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:19 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:20 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:20 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:20 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:21 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:22 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:24 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:26 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:27 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:30:27 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 03:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 03:30:46 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:11 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:12 --> Undefined variable $kategori
+in APPPATH\Views\browse.php on line 28.
+ 1 APPPATH\Views\browse.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:19 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:19 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:20 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:20 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:20 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:29 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:30 --> Undefined array key "nama_kategori"
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:30 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 03:31:30 --> Array to string conversion
+in APPPATH\Views\browse.php on line 29.
+ 1 APPPATH\Views\browse.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php', 29)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\browse.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('browse', [], true)
+ 5 APPPATH\Controllers\Kendaraan.php(23): view('browse', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kendaraan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kendaraan))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 03:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 03:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 04:31:31 --> There is no primary key defined when trying to make insert.
+in SYSTEMPATH\Model.php on line 283.
+ 1 SYSTEMPATH\Model.php(283): CodeIgniter\Database\Exceptions\DataException::forEmptyPrimaryKey('insert')
+ 2 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 3 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Models\Kendaraan.php(37): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Admin.php(43): App\Models\Kendaraan->saveKendaraan([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+ERROR - 2023-11-24 04:32:34 --> mysqli_sql_exception: Duplicate entry '' for key 'PRIMARY' in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ke...', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ke...')
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ke...')
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ke...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(37): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(43): App\Models\Kendaraan->saveKendaraan(Array)
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-11-24 04:32:34 --> Duplicate entry '' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kendaraan` (`kode_kategori`, `merk_kendaraan`, `varian`, `kapasitas_penumpang`, `tahun_produksi`, `nomor_polisi`, `harga_sewa`, `gambar`) VALUES (:kode_kategori:, :merk_kendaraan:, :varian:, :kapasitas_penumpang:, :tahun_produksi:, :nomor_polisi:, :harga_sewa:, :gambar:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Kendaraan.php(37): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Admin.php(43): App\Models\Kendaraan->saveKendaraan([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 04:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 04:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 05:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-24 06:03:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyekGogoRenta...', 3306, '', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-24 06:03:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCAT(CONCAT(merk_kendaraan, " "), varian) as detail_kendaraan
+FROM `kendaraan`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+ERROR - 2023-11-24 06:03:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyekGogoRenta...', 3306, '', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(50): App\Models\Kendaraan->getKendaraan('M001')
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->editKendaraan('M001')
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(50): App\Models\Kendaraan->getKendaraan('M001')
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->editKendaraan('M001')
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-24 06:03:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kendaraan`
+WHERE `id_kendaraan` = :id_kendaraan:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\Kendaraan.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Admin.php(50): App\Models\Kendaraan->getKendaraan('M001')
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->editKendaraan('M001')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+ERROR - 2023-11-24 06:03:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyekGogoRenta...', 3306, '', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-24 06:03:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCAT(CONCAT(merk_kendaraan, " "), varian) as detail_kendaraan
+FROM `kendaraan`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+ERROR - 2023-11-24 06:03:54 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyekGogoRenta...', 3306, '', 0)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCA...', Array, false)
+#3 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\app\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+#7 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+#8 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-24 06:03:54 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *, CONCAT(CONCAT(merk_kendaraan, " "), varian) as detail_kendaraan
+FROM `kendaraan`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Kendaraan.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin.php(21): App\Models\Kendaraan->getKendaraan()
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 06:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 06:28:24 --> Undefined variable $transaksi
+in APPPATH\Views\admin\kendaraan.php on line 140.
+ 1 APPPATH\Views\admin\kendaraan.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaksi', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\admin\\kendaraan.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\admin\\kendaraan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/kendaraan', [], true)
+ 5 APPPATH\Controllers\Admin.php(25): view('admin/kendaraan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:28:25 --> Undefined variable $transaksi
+in APPPATH\Views\admin\kendaraan.php on line 140.
+ 1 APPPATH\Views\admin\kendaraan.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaksi', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\admin\\kendaraan.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Views\\admin\\kendaraan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/kendaraan', [], true)
+ 5 APPPATH\Controllers\Admin.php(25): view('admin/kendaraan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->katalogKendaran()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 06:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 06:31:01 --> Too few arguments to function App\Controllers\Admin::updateKendaraan(), 0 passed in C:\xampp\htdocs\Praktikum\proyek-web-gogo-rentals\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Admin.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->updateKendaraan()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 06:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 06:47:18 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 53.
+ 1 APPPATH\Controllers\Admin.php(53): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(33): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:48:42 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 59.
+ 1 APPPATH\Controllers\Admin.php(59): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(33): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:48:43 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 59.
+ 1 APPPATH\Controllers\Admin.php(59): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(33): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:49:22 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 62.
+ 1 APPPATH\Controllers\Admin.php(62): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(35): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:49:23 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 62.
+ 1 APPPATH\Controllers\Admin.php(62): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(35): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 06:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 06:49:47 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 62.
+ 1 APPPATH\Controllers\Admin.php(62): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(35): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:51:07 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 62.
+ 1 APPPATH\Controllers\Admin.php(62): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(38): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:51:08 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 62.
+ 1 APPPATH\Controllers\Admin.php(62): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(38): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 06:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-24 06:51:20 --> substr(): Argument #1 ($string) must be of type string, array given
+in APPPATH\Controllers\Admin.php on line 62.
+ 1 APPPATH\Controllers\Admin.php(62): substr([...], 1)
+ 2 APPPATH\Controllers\Admin.php(38): App\Controllers\Admin->generateNextId([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:51:35 --> Undefined variable $nextId
+in APPPATH\Controllers\Admin.php on line 45.
+ 1 APPPATH\Controllers\Admin.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nextId', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Controllers\\Admin.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+CRITICAL - 2023-11-24 06:51:37 --> Undefined variable $nextId
+in APPPATH\Controllers\Admin.php on line 45.
+ 1 APPPATH\Controllers\Admin.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nextId', 'C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\app\\Controllers\\Admin.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->saveKendaraan()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Praktikum\\proyek-web-gogo-rentals\\public\\index.php')
+INFO - 2023-11-24 06:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 06:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 07:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 08:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 08:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 08:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-24 09:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

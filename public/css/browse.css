@@ -1,0 +1,331 @@
+.container {
+  width: 100%;
+  margin: auto;
+  /* border: 1px solid black; */
+  font-family: "circular-std";
+}
+
+.container-wrapper {
+  position: relative;
+  margin-top: 100px;
+}
+
+.reservasi-card::-webkit-scrollbar {
+  display: none;
+}
+
+.reservasi-card {
+  z-index: 100;
+  position: fixed;
+  padding: 20px;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  overflow-y: auto;
+  width: 500px;
+  height: 500px;
+  max-height: 1000px;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 20px;
+}
+
+.reservasi-card form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.reservasi-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.reservasi-card input,
+.reservasi-card select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.reservasi-card .checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.reservasi-card .checkout div {
+  /* background-color: yellow; */
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-weight: bold; */
+}
+
+.reservasi-card .checkout button {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 0 20px;
+}
+
+.reservasi-card input[type="submit"] {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.reservasi-card input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.active .reservasi-card {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.7s, opacity 0.7s;
+}
+
+.active .container-wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.closeReservasi {
+  text-align: right;
+  cursor: pointer;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+.container h1 {
+  font-size: 44px;
+  /* font-weight: bold; */
+  text-align: center;
+  font-family: "Jacques Francois Shadow";
+}
+
+.reservasi-card h1 {
+  font-family: "circular-std";
+}
+
+.cardContainer {
+  margin: 10px;
+  height: 300px;
+  width: 380px;
+  display: inline-block;
+  transition: 1s;
+}
+
+.list-mobil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s ease-in-out;
+  border-radius: 10px;
+  filter: drop-shadow(1px 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+.front-card,
+.back-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.front-card {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-color: grey;
+  color: #fff;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+}
+
+.front-card .gambar-kendaraan {
+  background-color: #fff;
+  height: 80%;
+  width: 100%;
+}
+
+.front-card .gambar-kendaraan img {
+  width: 100%;
+  max-height: 100%;
+  object-position: center;
+}
+
+.front-card .detail-kendaraan {
+  display: flex;
+  background-color: #303030;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.front-card .detail-kendaraan p {
+  color: white;
+  font-size: 20px;
+}
+
+.back-card {
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(56, 56, 56); */
+  /* background-image: url("../img/card-background.jpg"); */
+  /* backdrop-filter: blur(3px); */
+  background: rgba(0, 0, 0, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(100%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-card .showFrontCardButton {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  top: 5px;
+}
+
+.icon {
+  color: white;
+}
+
+.back-card .atas {
+  height: 80%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+
+.back-card .atas .gambar-bulat {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.back-card .atas p {
+  color: white;
+  font-size: 20px;
+}
+
+.back-card .atas h2 {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.back-card .atas .kapasitas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-card .atas .tahun {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-card .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  background-color: white;
+}
+
+.back-card .button p {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.revealed .back-card {
+  transform: translateY(0);
+}
+
+.kategori {
+  /* border: 1px solid black;
+    box-shadow: -1px 0 2px 0 black; */
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.kategori h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.kategori .back-card h2 {
+    padding-top: 0;
+}
+
+.nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav button {
+  margin: 5px;
+  height: 20px;
+}

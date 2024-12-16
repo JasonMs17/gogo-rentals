@@ -1,0 +1,156 @@
+.popup-card {
+    z-index: 100;
+    position: fixed;
+    padding: 20px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    overflow-y: auto;
+    width: 500px;
+    height: 500px;
+    max-height: 1000px;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup-card h1 {
+    font-size: 30px;
+}
+
+.popup-card form {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.popup-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.popup-card input,
+.popup-card select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.popup-card .checkout {
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.popup-card .checkout button {
+    border: none;
+    background-color: black;
+    color: white;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 0 20px;
+}
+
+
+.popup-card input[type="submit"] {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-card input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.active .popup-card {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.7s, opacity 0.7s;
+}
+
+.active .container-wrapper::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+
+.close {
+    align-self: end;
+    cursor: pointer;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+.edit-button {
+    display: inline;
+}
+
+/* drop file */
+#fileUploadContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.file-drop {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.file-drop:hover {
+    border-color: rgb(147, 147, 147);
+}
+
+.drop-text {
+    font-size: 16px;
+    color: #555;
+}
+
+.file-input {
+    display: none;
+}
+
+#selectedFileName {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.remove-btn {
+    display: none;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+.file-drop.file-selected #removeFileBtn {
+    display: inline-block;
+}

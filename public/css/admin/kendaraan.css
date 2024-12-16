@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-family: 'circular-std';
+}
+
+.container h1 {
+    display: inline-block;
+    font-size: 40px;
+    font-family: system-ui;
+    color: black;
+    margin-bottom: 40px;
+    font-family: 'Jacques Francois Shadow';
+}
+
+.table-wrapper {
+    max-width: 90%;
+    overflow-x: auto;
+}
+
+.content-table {
+    min-width: 1000px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);   
+}
+
+.content-table th,
+.content-table td {
+    padding: 15px 20px;
+}
+
+.content-table thead tr {
+    background-color: #b5bcc6;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background: #f5f2f2;
+}
+
+.content-table tbody tr:nth-of-type(odd) {
+    background: #ffffff;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2.5px solid #3570c4;
+}
+
+button {
+    width: 150px;
+    background-color: #3570c4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: start;
+}
+
+button:hover {
+    background-color: #10539b;
+}
+
+.icon {
+    color: #1e3751;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+}
